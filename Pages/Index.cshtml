@@ -1,0 +1,55 @@
+﻿@page
+@using CRUDAutos.Models
+@model CRUDAutos.Pages.IndexModel
+@{
+
+	<div id="btn">
+		<a href="Nuevo">
+			<button id="nuevo" class="btn btn-primary">Nueva publicación</button>
+		</a>
+	</div>
+	<br />
+
+	ViewData["Title"] = "Alta Socios";
+	var listado = Model.lista.obtenerAutos();
+	var autosPublicados = Model.lista.obtenerAutos().Count();
+	<p>Autos publicados: @autosPublicados</p>
+
+	if (listado.Count == 0)
+	{
+		<p>No se encuentra vehiculos cargados actualmente</p>
+	}
+	else
+	{
+
+		foreach (var item in listado)
+		{
+			<div id="container">
+				<div id="container2">
+
+					<img src="@item.url" width="175" height="150">
+					<p class="info" id="p">Marca: @item.marca</p>
+					<p class="info">Modelo: @item.modelo</p>
+					<p class="info">Año: @item.año</p>
+					<p class="info">KM: @item.km</p>
+					<p class="valor">Precio: $@item.precio</p>
+					<a href="Editar?id=@item.id">
+						<p class="info2">Editar</p>
+
+					</a>
+					<a href="Borrar?id=@item.id">
+						<p class="info3">Borrar</p>
+
+					</a>
+
+				</div>
+			</div>
+		}
+
+	}
+
+
+}
+
+	
+

@@ -1,0 +1,66 @@
+﻿@page
+@model CRUDAutos.Pages.EditarModel
+@{
+
+	<form action="" method="post">
+			<div>
+				<b>
+					<span>Marca:</span>
+				</b>
+				<br>
+				<input name="marca" type="text" value="@Model.auto.marca">
+			</div>
+
+			<br>
+
+			<div>
+				<b><span>Modelo:</span></b>
+				<br>
+			<input name="modelo" type="text" value="@Model.auto.modelo">
+			</div>
+			<br>
+			<div>
+				<b>
+					<span>Año:</span>
+				</b>
+				<br>
+			<input name="año" type="number" value="@Model.auto.año">
+				<br>
+			</div>
+			<br>
+			<div>
+				<b>
+					<span>Precio:</span>
+				</b>
+				<br>
+			<input name="precio" type="number" value="@Model.auto.precio">
+			</div>
+			<br>
+			<div>
+				<b>	<span>KM:</span></b>
+				<br>
+			<input name="km" type="number"value="@Model.auto.km">
+			</div>
+			<br>
+			<div>
+				<b>	<span>Url:</span></b>
+				<br>
+			<input name="url" type="text" required value="@Model.auto.url">
+		</div>
+			<br />
+
+			<br />	
+			<button class="btn btn-outline-success">Enviar</button>
+			<br />
+			<br />
+
+	</form>
+
+	<div id="btn">
+		<a href="Index">
+			<button id="nuevo" class="btn btn-primary">Regresar</button>
+		</a>
+	</div>
+	<br />
+
+}
