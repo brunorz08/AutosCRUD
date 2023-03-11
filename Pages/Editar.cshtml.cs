@@ -21,7 +21,9 @@ namespace CRUDAutos.Pages
 
         public void OnPost()
         {
-            listado.editarAuto(new Auto()
+            int id = Convert.ToInt16(Request.Query["id"]);
+
+            listado.editarAuto(id,new Auto()
             {
 
                 marca = Request.Form["marca"],
