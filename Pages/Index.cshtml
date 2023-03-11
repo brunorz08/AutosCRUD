@@ -10,9 +10,10 @@
 	</div>
 	<br />
 
-	ViewData["Title"] = "Alta Socios";
+	ViewData["Title"] = "";
 	var listado = Model.lista.obtenerAutos();
 	var autosPublicados = Model.lista.obtenerAutos().Count();
+	
 	<p>Autos publicados: @autosPublicados</p>
 
 	if (listado.Count == 0)
