@@ -68,14 +68,14 @@
             return lista;
         }
 
-        public void editarAuto(Auto auto)
+        public void editarAuto(int id,Auto auto)
         {
-            lista[auto.id].marca = auto.marca;
-            lista[auto.id].modelo = auto.modelo;
-            lista[auto.id].año = auto.año;
-            lista[auto.id].km = auto.km;
-            lista[auto.id].precio = auto.precio;
-            lista[auto.id].url = auto.url;
+            lista[id].marca = auto.marca;
+            lista[id].modelo = auto.modelo;
+            lista[id].año = auto.año;
+            lista[id].km = auto.km;
+            lista[id].precio = auto.precio;
+            lista[id].url = auto.url;
         }
 
   
